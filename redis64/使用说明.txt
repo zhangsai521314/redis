@@ -1,0 +1,17 @@
+1.将本文件夹放到C盘的根目录下。
+2.使用控件台的方式运行redis-server.exe
+	启动命令为：redis-server.exe redis.conf
+3.将该程序放到Windows服务中
+	命令行为： redis-server.exe --service-install redis.conf --loglevel verbose
+	返回的信息：
+	[11564] 04 May 19:07:55.252 # Granting read/write access to 'NT AUTHORITY\Networ
+	kService' on: "C:\redis64" "C:\redis64\"
+	[11564] 04 May 19:07:55.253 # Redis successfully installed as a service.
+	表示成功
+	启动windows服务查看器：services.msc，查看Redis是否已经增加到Windows服务中了。
+4.卸载Windows服务中的Redis服务：
+命令为：redis-server --service-uninstall
+
+
+
+
